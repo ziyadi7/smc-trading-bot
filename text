@@ -1,0 +1,26 @@
+smc-bot/
+├── smc_signaler_v5.py
+├── config.yaml
+├── requirements.txt
+├── get_chat_id.py
+├── test_mt5.py
+├── test_basic.py
+├── test_complete.py
+├── smc/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── logging.py
+│   ├── io_mt5.py
+│   ├── detectors.py
+│   ├── scoring.py
+│   ├── engine.py
+│   ├── store.py
+│   ├── telegram.py
+│   ├── news.py
+│   ├── regime_detector.py
+│   ├── session_analyzer.py
+│   ├── correlation_guard.py
+│   ├── flow_detector.py
+│   └── charting.py
+└── .vscode/
+    └── settings.json

@@ -1,0 +1,19 @@
+{
+    "python.defaultInterpreterPath": "./smc_env/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "python.analysis.extraPaths": ["./smc"],
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "100"
+    ],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
+}

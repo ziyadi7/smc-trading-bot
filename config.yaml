@@ -1,0 +1,57 @@
+# SMC Institutional Trading Bot Configuration
+# Elite Order Flow & Liquidity Strategy
+
+mt5:
+  symbols:
+    - XAUUSD
+  lookback: 1000
+  poll_seconds: 10
+
+news:
+  enabled: true
+  blackout_min_before: 45
+  blackout_min_after: 90
+  sources:
+    - forexfactory
+    - investing.com
+  cache_ttl_minutes: 30
+
+trading:
+  # Risk Management
+  risk_r_multiples: [1.0, 2.0, 3.0]
+  risk_per_trade: 0.02
+  max_open_trades: 3
+  
+  # Signal Detection
+  min_displacement: 2.0
+  min_elite_score: 7
+  fu_body_atr: 0.8
+  fu_close_frac: 0.6
+  ob_prox_atr: 1.0
+  
+  # Elite Features
+  adaptive_risk: true
+  correlation_checks: true
+  session_aware: true
+  regime_adaptive: true
+
+telegram:
+  bot_token: "8583781406:AAHRkxtGiYzVe5P4uomE5-R2VNyth5qIXJc"
+  chat_id: "2037761066"
+
+symbol_currencies:
+  XAUUSD: ["USD", "XAU"]
+
+storage:
+  sqlite_path: "institutional_signals.db"
+
+scoring:
+  dimensions:
+    - daily_bias
+    - ob_quality 
+    - liquidity
+    - fu_strength
+    - market_structure
+    - session_alignment
+    - correlation_support
+    - institutional_flow
